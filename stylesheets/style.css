@@ -74,10 +74,6 @@ a {
     color: inherit;
 }
 
-a:hover {
-    color: #00BCD4;
-}
-
 footer, #wrapper:after {
     height: 50px;
 }
@@ -163,6 +159,10 @@ footer {
 .social {
     width: 40%;
     margin-left: 400px;
+}
+
+.social a:hover {
+    color: #00BCD4;
 }
 .social ul {
   columns: 4;
