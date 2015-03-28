@@ -105,12 +105,12 @@ footer {
 }
 
 #navbar-brand {
-    display: inline-block;
+    text-align: center;
 }
 
 #navbar-list {
-    display: inline;
-    float: right;
+/*    display: inline;*/
+    text-align: center;
 }
 
 #navbar li
