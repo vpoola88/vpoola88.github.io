@@ -298,3 +298,30 @@ footer {
   -moz-columns: 2;
   text-align: center;
 }
+
+
+
+
+@media (max-width:767px){
+
+    .profile {
+        display: none;
+    }
+
+    .aboutme p.inline {
+        margin-left: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
