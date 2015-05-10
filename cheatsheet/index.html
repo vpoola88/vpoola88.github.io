@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <!-- bootstrap files -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+        <div class="intro-header">
+            <div class="container">
+                <div class="intro-header-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>
+                                JavaScript Objects Cheat Sheet
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <h4>
+                                Vivek Poola
+                            </h4>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <h4>
+                                Jeff Chang
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="define">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>
+                            Defining Objects
+                        </h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>
+                            JavaScript Objects are variables that can contain many values. Specifically, they contain corresponding property-value pairs. These are really useful when we want to be able to call up values from a property.
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            Objects in JavaScript can be defined in two ways: literal notation and constructor methods. With object literal notation, we can create an object by defining a variable and setting it equal to an empty object(with empty curly brackets {}). 
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <h4>Object Literal</h4>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <pre>
+                            var object = {};
+                        </pre>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            Once we have our object defined, we can add property-value pairs to this object. For example:
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <pre>
+                            var object = {
+                                name: "John Smith",
+                                height: "180cm",
+                                age: 25
+                            };
+                        </pre>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            In the above example, we added properties to the object by assigning a property(key) such as name, height, or age, as well as a value to each such as "John Smith", "180cm", and 25.
+                        </p>
+                    </div>
+
+
+                    <div class="col-xs-12">
+                        <h4>Constructor Method</h4>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <pre>
+                            var person = new Object();
+                            person.name = "John Smith";
+                            person.height = "180cm";
+                            person.age = 25;
+                        </pre>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            With this method, we are assigning the same property-value pairs as before with the literal notation, but we are adding them after first defining the new empty object. Then, we individually define the properties and values.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="interact">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Interacting With Objects</h2>
+                    </div>
+
+
+                    <div class="col-xs-12">
+                        <h4>Dot Notation</h4>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            There are many ways to communicate with and alter an object, the first of which is dot notation, as we used above in the constructor method. The advantage of dot notation is that we can call, assign, or reassign any property related to the object. 
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <pre>
+                            person.name; //output: "John Smith"
+                            person.name = "John Doe";
+                            person.name; //output: "John Doe"
+
+                            person.weight = 160;
+                        </pre>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            In the example above, we are calling assigning, and reassigning properties to our object "person". We can see that by using the dot notation, we have the flexibility to perform all these methods on our object. "person.name ="" is reassigning the name property, which is already existing in our object "person". "person.weight =" is assigning a new property, not existing previously in our object.
+                        </p>
+                    </div>
+
+
+                    <div class="col-xs-12">
+                        <h4>Bracket Notation</h4>
+                    </div>
+                    
+                    <div class="col-xs-12">
+                        <p>
+                            The second method we can use to interact with objects is bracket notation. The advantage of bracket notation is that we can substitute variables in for properties. This allows us to loop through objects, call them literally, or set values to properties that don't exist yet.
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <pre>
+                            for (property in person) {
+                                console.log(person[property]);
+                            } 
+                            //output: "John Doe"
+                            //output: "180cm"
+                            //output: 25
+                            //output: 160
+
+                            var x = "weight";
+                            console.log(person[x]); //output: 160
+
+                            person["gender"] = "male";
+                        </pre>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <p>
+                            In the above example, we used the bracket notation to individually print out each property in person, use a variable "x" to call the value of "weight", and assign a new property-value pair.
+                        </p>
+                    </div>
+                </div>
+            </div><!-- Interact -->
+
+            <div id="function">
+                <div class="col-xs-12">
+                    <h2>Functions With Objects</h2>
+                </div>
+
+                <div class="col-xs-12">
+                    <p>
+                        We can also utilize dot notation to perform functions to interact with objects. We can define a function to construct an object automatically given values to properties.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        
+                        <pre>
+                            function Person(name,height,age,weight,gender) {
+                                this.name = name;
+                                this.height = height;
+                                this.age = age;
+                                this.weight = weight;
+                                this.gender = gender;
+                            }
+
+                            var jane = new Person("Jane Doe", "160cm", 19, 110, "female");
+
+                            //output: 
+                            jane = {
+                                name: "Jane Doe",
+                                height: "160cm",
+                                age: 19,
+                                weight: 110,
+                                gender: "female"
+                            }
+                        </pre>
+                        
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <p>
+                        As you can see in the above example, the function "Person" that we pre-defined, automatically created a new object "jane" with property-value pairs we provided it as arguments. This is especially useful when we have to create many objects with the same parameters.
+                    </p>
+                </div>
+            </div>
+
+        </div><!--container-->
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>
