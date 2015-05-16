@@ -1,0 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Abel|Open+Sans|Oswald);
+
+@import "less/scaffold.less";
+
+@import "less/page-styles.less";
+
+@import "less/nav.less";
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0px;
+    text-align: center;
+    color: #fff;
+    background: url(http://experimint.nl/img/carousel/lines-of-code.jpg) no-repeat center scroll;
+    background-color: #333;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:767px) {
+    .intro {
+        height: 100%;
+        // padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 50px;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 25px;
+    }
+}
+
+
+.pages h3 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-shadow: 2px 2px #000;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 1.5;
+    background-color: rgba(0,0,0,0.3);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #FFF;
+}
+
+.pages h3:hover {
+    color: #00BCD4;
+}
+
+.pages .about {
+    background-image: url(http://www.sdvg.org/wp-content/uploads/2014/01/san-diego.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+}
+
+
+.pages .blog {
+    background-image: url(../img/blogbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+}
+
+
+.pages .work {
+    background-image: url(http://simianuprising.com/wp-content/uploads/2012/08/solarized-dark-jer-screenshot.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+}
+
+header {
+    padding-top: 150px;
+}
+
+#aboutme {
+    background-image: url('http://blog.sandiego.org/wp-content/uploads/2012/04/Skyline-from-Coronado-2011_8416.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position-y: -220px;
+
+    h1  {
+        color: #FFF;
+    }
+}
+
+
+#blog {
+    background-image: url('http://the420times.com/wp-content/uploads/2015/01/San_Diego.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position-y: -20px;
+
+    h1 {
+        color: #fff;
+    }
+
+
+}
+
+    .blog-post {
+        border: 1px solid black;
+        padding: 20px;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        section{
+            padding: 0px;
+        }
+    }
+
+#post {
+    margin-top: 80px;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h4,h5 {
+    font-family: 'Abel', sans-serif;
+}
+
+p { 
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-link {
+    padding: 10px 15px;
+    background: #607D8B;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+#work {
+        background-image: url('http://experimint.nl/img/carousel/lines-of-code.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position-y: -50px;
+
+    h1 {
+        color: #fff;
+    }
+}
