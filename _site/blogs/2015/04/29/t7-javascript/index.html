@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ruby Classes and JavaScript Constructor Functions</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="https://example.github.io/blogs/2015/04/29/t7-javascript/">
+
+    <!-- Custom CSS & Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+     <!-- Navigation -->
+    <nav class="navbar navbar-custom2 navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Vivek Poola</span>
+                </a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/blog">My Blog</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div id="post">
+    	<div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1>Ruby Classes and JavaScript Constructor Functions</h1>
+                    <h2>Which do you like?</h2>
+                    <h4>April 29, 2015</h4>
+                </div>
+            </div>
+            <div class="row">
+                <p>I wonder what the world would be like if everyone spoke one language. But if that were to happen, someone would have to decide what that language would be. Would it be English, with its awesome ability to inter mix words? Would it be french, since it just sounds cool? Or would it be Spanish, because it is one of the most spoken languages in the world? Though we all may feel differently about language, we can agree that one language isnt necessarily better than the other. And so just as it is with the world out there, we see a vast variety of languages known to the programming world. Which ones the best? Well, I dont know, I know I have my opinion, and you may have yours, but we know that each language will serve its purpose.</p>
+
+<p>JavaScript and Ruby are both huge languages in the dev world. We can think of these as equivelent to those languages that are the most spoken tongue. Both ruby and javascript focus on object orientation - so whats the difference? Though JS may be the language of web interactivity, it contains objects, functions, methods, variables, etc that ruby does as well. The differences can be big, but today, we will focus on the difference of syntax, specically, classes and functions.</p>
+
+<p>The ability to manipulate user input/data is pretty awesome in both languages. Lets focus on Ruby classes first, and then look into how JavaScript will perform ac</p>
+
+<p>We all love social media right? Don’t lie. Social Media can mean a lot of things, but lets think of the most basic aspect of social media - personal information. Let say I have a record of contacts, each with different personal information. Lets explore both in Ruby and Javascript.</p>
+
+<pre>
+class Contact
+                attr_accessor :name, :age, :email
+
+                def initialize(name, age, email)
+                    @name, @age, @email = name, age, email
+                end
+
+                def display_contact
+                    puts "Name: #{@name}"
+                    puts "Age: #{@age}"
+                    puts "Email: #{@email}"
+                    puts
+                end
+
+            end
+
+
+            vivek = Contact.new('Vivek', 27, 'vpoola88@gmail.com')
+
+            vivek.display_contact
+                &gt; Name: Vivek
+                &gt; Age: 27
+                &gt; Email: vpoola88@gmail.com
+
+            vivek.name = 'Vivek Poola'
+
+            vivek.display_contact
+                &gt; Name: Vivek Poola
+                &gt; Age: 27
+                &gt; Email: vpoola88@gmail.com
+            </pre>
+
+<p>We can see that the above code accepts fields for a contact, and then will display them. Now, if you want to change that contact info (so above name), simpile reset the value of the name argument to your contact instance (vivek).</p>
+
+<p>Stay with me, its not too bad.</p>
+
+<p>Time for JavaScript</p>
+
+<pre>
+function Contact(name, age, email){
+                this.name = name,
+                this.age = age,
+                this.email = email
+            };
+
+            var vivek = new Contact('Vivek', 27, 'vpoola88@gmail.com')
+
+            console.log(vivek)
+                //&gt; { name: 'Vivek', age: 27, email: 'vpoola88@gmail.com' }
+
+            vivek.name = 'Vivek Poola'
+
+
+            console.log(vivek)
+                //&gt; { name: 'Vivek Poola', age: 27, email: 'vpoola88@gmail.com' }
+        
+        </pre>
+
+<p>Alright - that might seem like a lot, but really we are doing something very simple here. Both Ruby and JavaScript are creating an object Contact, that has the arguments name, age, and email. We can see that in Ruby, we are able to do a little more within a method with what we return, where in JavaScript, we are returning only 1 value per function. Both languages allow us to set values for attributes (must be specified in Ruby) the same way, and we can see that both outputs for our new object will show the updated name etc.</p>
+
+<p>The overall takeaway here is that Ruby Classes and JavaScript constructor functions both can create instances of their objects and work with arguments. However, each has its own syntax in doing so. Additionally, Ruby allows attributres access rights to change and set, where JavaScript (at least that I know of to this moment) does not allow in the same way. Javascripts “this” argument referes to its own attributes tha can be changed.</p>
+
+<p>All languages, programming or not, are awesome and many. Each has its own strenghts and purpose. JavaScript and Ruby are no exception, and both have an important place in the world of tech.</p>
+
+            </div>
+            <a class="button-link" href="/blog">Go Back</a>
+        </div>
+    </div>
+    </body>
+</html>
