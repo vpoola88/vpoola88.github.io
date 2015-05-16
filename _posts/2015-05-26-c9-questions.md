@@ -10,7 +10,7 @@ Dumb questions may exist, but as the saying goes, there is no such thing as one.
 
 I am at times an avid stack overflow user, so lets pick a question I have asked and decipher how to change the way I've asked it. 
 
-<a href="http://askubuntu.com/questions/170405/mdadm-raid-drive-rebuild-each-reboot">My Question</a>
+<a href="http://askubuntu.com/questions/170405/mdadm-raid-drive-rebuild-each-reboot">View My Question</a>
 
 The link above is a question I asked about 3 years ago. I was learning how to build a RAID using linux, and was in a rush to see this project done. Lets dig in to how to make this better by imagining myself answer this question now.
 
